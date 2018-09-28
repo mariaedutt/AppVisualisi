@@ -17,9 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".ListExamesActivity"
-            android:label="Lista de Exames"
-            ></activity>
+            android:label="Lista de Exames">
+        </activity>
     </application>
 
 </manifest>
