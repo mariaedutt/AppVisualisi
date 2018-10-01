@@ -4,11 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.inf3m171.yan.appvisualisi.ListConsultasActivity">
+    tools:context="com.inf3m171.yan.appvisualisi.ListConsultasActivity"
+    android:padding="2dp"
+    android:background="#012686"
+    android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suas consultas:"
+        android:textStyle="italic|bold"
+        android:textColor="#fff"
+        android:paddingLeft="8dp"
+        android:textSize="20dp"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:id="@+id/lvListaExames"></ListView>
+        android:id="@+id/lvListaConsultas"
+        android:background="#fff">
+
+    </ListView>
 </LinearLayout>
