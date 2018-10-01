@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"
+            android:label="Clínica Oftalmológica Visualisi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +19,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CadastroActivity"></activity>
+        <activity android:name=".ListExamesActivity"
+            android:label="Lista de Exames">
+        </activity>
     </application>
 
 </manifest>

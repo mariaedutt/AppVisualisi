@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "993329793308",
+    "firebase_url": "https://appvisualisi.firebaseio.com",
+    "project_id": "appvisualisi",
+    "storage_bucket": "appvisualisi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993329793308:android:f3899c280c271b0f",
+        "android_client_info": {
+          "package_name": "com.inf3m171.yan.appvisualisi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993329793308-874p0atsc3eof6cei7ufeh6at8qghali.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvR4D4_njU6fNvFd0SIpKu2l7ovgwdeBI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
