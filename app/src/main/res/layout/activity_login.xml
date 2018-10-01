@@ -10,16 +10,25 @@
     android:background="#a0cafd"
     tools:context=".LoginActivity">
 
-
-    <TextView
+    <LinearLayout
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="E-mail:"
-        android:textSize="25dp"
-        android:textAlignment="center"
-
-        />
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:drawable/ic_dialog_email"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="25dp"/>
+    </LinearLayout>
 
     <EditText
         android:layout_width="match_parent"
