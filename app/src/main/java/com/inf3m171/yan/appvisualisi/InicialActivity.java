@@ -20,18 +20,21 @@ public class InicialActivity extends AppCompatActivity {
         btnMarcar = (Button) findViewById(R.id.btnMarcar);
         btnConsultar = (ImageButton) findViewById(R.id.btnConsultar);
 
-//        btnMarcar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(InicialActivity.this, MarcarConsultasActivity.class)
-//            }
-//        });
+        btnMarcar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(InicialActivity.this, MarcarConsultaActivity.class);
 
-//        btnMarcar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(InicialActivity.this, ListaActivity.class)
-//            }
-//        });
+            }
+        });
+
+        btnConsultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(InicialActivity.this, ListConsultasActivity.class);
+                startActivity(i);
+
+            }
+        });
     }
 }

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        
         <activity android:name=".LoginActivity"
             android:label="Clínica Oftalmológica Visualisi">
             <intent-filter>
@@ -23,7 +23,7 @@
 
         <activity android:name=".InicialActivity"></activity>
 
-        <activity android:name=".ListExamesActivity"
+        <activity android:name=".ListConsultasActivity"
             android:label="Lista de Exames">
         </activity>
 
