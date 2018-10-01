@@ -19,9 +19,15 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".CadastroActivity"></activity>
+
+        <activity android:name=".InicialActivity"></activity>
+
         <activity android:name=".ListExamesActivity"
             android:label="Lista de Exames">
         </activity>
+
+
     </application>
 
 </manifest>

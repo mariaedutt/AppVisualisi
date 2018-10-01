@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.inf3m171.yan.appvisualisi.CadastroActivity">
+    tools:context="com.inf3m171.yan.appvisualisi.CadastroActivity"
+    android:background="#a5e4e6"
+    android:padding="2dp">
 
 
     <TextView
@@ -13,10 +15,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="Nome"
+        android:layout_marginTop="60dp"
+        android:text="Nome:"
         app:layout_constraintEnd_toStartOf="@+id/etNome"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,37 +39,37 @@
         android:id="@+id/etNome"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="Nome"
+        android:hint="Digite seu nome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtCpf"
-        android:layout_width="40dp"
-        android:layout_height="23dp"
+        android:layout_width="39dp"
+        android:layout_height="22dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="CPF"
+        android:layout_marginTop="20dp"
+        android:text="CPF:"
         app:layout_constraintEnd_toStartOf="@+id/etCpf"
-        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNome" />
 
     <TextView
         android:id="@+id/txtDataDeNascimento"
-        android:layout_width="95dp"
-        android:layout_height="21dp"
+        android:layout_width="76dp"
+        android:layout_height="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:text="Nascimento"
+        android:layout_marginTop="24dp"
+        android:text="Nascimento:"
         app:layout_constraintEnd_toStartOf="@+id/etDataDeNascimento"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
@@ -77,33 +79,33 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="Telefone"
+        android:layout_marginTop="20dp"
+        android:text="Telefone:"
         app:layout_constraintEnd_toStartOf="@+id/etTelefone"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDataDeNascimento" />
 
     <TextView
         android:id="@+id/txtEmail"
-        android:layout_width="51dp"
+        android:layout_width="39dp"
         android:layout_height="19dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:text="Email"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Email:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTelefone" />
 
     <TextView
         android:id="@+id/txtSenha"
-        android:layout_width="59dp"
-        android:layout_height="21dp"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:text="Senha"
+        android:layout_marginTop="52dp"
+        android:text="Senha:"
         app:layout_constraintEnd_toStartOf="@+id/etSenha"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
@@ -111,8 +113,8 @@
         android:id="@+id/etCpf"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
@@ -122,8 +124,8 @@
         android:id="@+id/etDataDeNascimento"
         android:layout_width="122dp"
         android:layout_height="36dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="/    /    /"
         android:inputType="date"
@@ -134,8 +136,7 @@
         android:id="@+id/etTelefone"
         android:layout_width="149dp"
         android:layout_height="34dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="116dp"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,14 +145,15 @@
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="274dp"
-        android:layout_height="28dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="Digite seu email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toEndOf="@+id/txtEmail"
         app:layout_constraintTop_toBottomOf="@+id/etTelefone" />
 
@@ -159,10 +161,9 @@
         android:id="@+id/etSenha"
         android:layout_width="189dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="**********"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail" />
@@ -173,10 +174,10 @@
         android:layout_height="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Confirme a Senha"
+        android:layout_marginTop="4dp"
+        android:text="Confirme a Senha:"
         app:layout_constraintEnd_toStartOf="@+id/etConfirmaSenha"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSenha" />
 
@@ -184,8 +185,7 @@
         android:id="@+id/etConfirmaSenha"
         android:layout_width="189dp"
         android:layout_height="29dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:hint="**********"
         android:inputType="textPassword"
@@ -193,7 +193,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etSenha" />
 
     <Button
-        android:id="@+id/btnLimpar"
+        android:id="@+id/btnLimparCadastro"
         android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -203,10 +203,23 @@
         android:text="LIMPAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCadastrar"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.322"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConfirmaSenha"
-        app:layout_constraintVertical_bias="0.513" />
+        app:layout_constraintVertical_bias="0.518" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="FAÇA O SEU CADASTRO"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="4dp" />
 
 
 </android.support.constraint.ConstraintLayout>
