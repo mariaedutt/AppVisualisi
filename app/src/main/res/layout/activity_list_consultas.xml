@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.inf3m171.yan.appvisualisi.ListExamesActivity">
+    tools:context="com.inf3m171.yan.appvisualisi.ListConsultasActivity">
 
     <ListView
         android:layout_width="match_parent"
