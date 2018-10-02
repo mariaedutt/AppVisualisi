@@ -31,7 +31,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="60dp"
-
+        android:entries="@/listMedicos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,18 +40,25 @@
     </Spinner>
 
 
+<<<<<<< HEAD
     <EditText
         android:id="@+id/etData"
+=======
+    <TextView
+        android:id="@+id/editText2"
+>>>>>>> a4dec8ac3df91ee4083eb7453d8a20b309df7c6f
         android:layout_width="66dp"
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
         android:ems="10"
-        android:hint="Data:"
+        android:text="Data: "
         android:inputType="date"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spMedico" />
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/txtData"
         android:layout_width="71dp"
         android:layout_height="24dp"
@@ -62,6 +69,18 @@
         app:layout_constraintEnd_toStartOf="@+id/btnAdicionarData"
         app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toEndOf="@+id/etData"
+=======
+        android:id="@+id/tvDataCalendario"
+        android:layout_width="71dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toEndOf="@+id/editText2"
+>>>>>>> a4dec8ac3df91ee4083eb7453d8a20b309df7c6f
         app:layout_constraintTop_toBottomOf="@+id/spMedico" />
 
     <Button
@@ -91,6 +110,7 @@
 
     <Spinner
         android:id="@+id/spHorarios"
+        android:entries="@/listHorarios"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -117,6 +137,7 @@
 
     <Spinner
         android:id="@+id/spConvenio"
+        android:entries="@/listConvenios"
         android:layout_width="208dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -139,14 +160,14 @@
 
     <Button
         android:id="@+id/btnConfirmar"
-        android:layout_width="92dp"
+        android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="84dp"
         android:text="Confirmar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toEndOf="@+id/btnLimpar"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 

@@ -1,3 +1,43 @@
 <resources>
     <string name="app_name">AppVisualisi</string>
+
+    <string-array name="listMedicos">
+        <item>Selecione...</item>
+        <item>Dr. Vladimir</item>
+        <item>Dra. Maria Eduarda</item>
+        <item>Dr. Frederico</item>
+        <item>Dr. Laercio Júnior</item>
+    </string-array>
+
+    <string-array name="listConvenios">
+        <item>Selecione...</item>
+        <item>IPERGS</item>
+        <item>UNIMED</item>
+        <item>CGG</item>
+        <item>BlueLife</item>
+        <item>Particular</item>
+    </string-array>
+
+    <string-array name="listHorarios">
+        <item>Selecione...</item>
+        <item>9:00</item>
+        <item>9:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+    </string-array>
 </resources>
