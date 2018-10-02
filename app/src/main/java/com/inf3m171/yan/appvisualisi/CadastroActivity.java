@@ -32,7 +32,7 @@ public class CadastroActivity extends AppCompatActivity {
         etConfirmaSenha = (EditText) findViewById(R.id.etConfirmaSenha);
 
         btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
-        btnLimparCadastro = (Button) findViewById(R.id.btnLimpar);
+        btnLimparCadastro = (Button) findViewById(R.id.btnLimparCadastro);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +81,13 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void limpar(){
+        etNome.setText("");
+        etCpf.setText("");
+        etDataDeNascimento.setText("");
+        etTelefone.setText("");
+        etEmail.setText("");
+        etSenha.setText("");
+        etConfirmaSenha.setText("");
 
     }
 

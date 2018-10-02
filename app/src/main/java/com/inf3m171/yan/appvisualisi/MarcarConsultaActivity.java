@@ -90,9 +90,6 @@ public class MarcarConsultaActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-
-
     }
 
     private void salvar(){
@@ -110,8 +107,6 @@ public class MarcarConsultaActivity extends AppCompatActivity {
             alerta.setTitle("Erro!");
             alerta.setMessage("Favor selecionar o seu horário para a consulta!");
         }
-
-
 
         }
 }

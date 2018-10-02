@@ -24,7 +24,7 @@ public class InicialActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(InicialActivity.this, MarcarConsultaActivity.class);
-
+                startActivity(i);
             }
         });
 

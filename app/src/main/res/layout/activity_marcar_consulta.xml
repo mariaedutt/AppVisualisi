@@ -39,7 +39,6 @@
 
     </Spinner>
 
-
     <TextView
         android:id="@+id/editText2"
         android:layout_width="66dp"
