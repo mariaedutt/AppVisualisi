@@ -18,10 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ListConsultasActivity"
-            android:label="Lista de Exames"></activity>
-        <activity android:name=".MarcarConsultaActivity"></activity>
+
+        <activity android:name=".CadastroActivity"></activity>
+
+        <activity android:name=".InicialActivity"></activity>
+
+        <activity android:name=".ListConsultasActivity"
+            android:label="Lista de Exames">
+        </activity>
+
+
     </application>
 
 </manifest>
