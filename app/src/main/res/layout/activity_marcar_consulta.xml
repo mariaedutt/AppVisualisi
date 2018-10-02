@@ -39,14 +39,8 @@
 
     </Spinner>
 
-
-<<<<<<< HEAD
-    <EditText
-        android:id="@+id/etData"
-=======
     <TextView
         android:id="@+id/editText2"
->>>>>>> a4dec8ac3df91ee4083eb7453d8a20b309df7c6f
         android:layout_width="66dp"
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
@@ -58,18 +52,6 @@
         app:layout_constraintTop_toBottomOf="@+id/spMedico" />
 
     <TextView
-<<<<<<< HEAD
-        android:id="@+id/txtData"
-        android:layout_width="71dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/btnAdicionarData"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toEndOf="@+id/etData"
-=======
         android:id="@+id/tvDataCalendario"
         android:layout_width="71dp"
         android:layout_height="24dp"
@@ -80,7 +62,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.204"
         app:layout_constraintStart_toEndOf="@+id/editText2"
->>>>>>> a4dec8ac3df91ee4083eb7453d8a20b309df7c6f
         app:layout_constraintTop_toBottomOf="@+id/spMedico" />
 
     <Button

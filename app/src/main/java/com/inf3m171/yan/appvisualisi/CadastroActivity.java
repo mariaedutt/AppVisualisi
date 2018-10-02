@@ -48,6 +48,13 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void limpar(){
+        etNome.setText("");
+        etCpf.setText("");
+        etDataDeNascimento.setText("");
+        etTelefone.setText("");
+        etEmail.setText("");
+        etSenha.setText("");
+        etConfirmaSenha.setText("");
 
     }
 
