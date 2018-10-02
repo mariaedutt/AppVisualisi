@@ -14,7 +14,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.inf3m171.yan.appvisualisi.Model.Paciente;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText etSenha, etEmail;
