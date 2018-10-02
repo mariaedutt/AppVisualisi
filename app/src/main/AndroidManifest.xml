@@ -27,6 +27,10 @@
             android:label="Lista de Exames">
         </activity>
 
+        <activity android:name=".MarcarConsultaActivity">
+
+        </activity>
+
 
     </application>
 
