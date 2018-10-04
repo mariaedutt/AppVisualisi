@@ -44,35 +44,33 @@
         android:layout_width="66dp"
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:text="Data: "
         android:inputType="date"
+        android:text="Data: "
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spMedico" />
 
     <TextView
         android:id="@+id/tvDataCalendario"
-        android:layout_width="71dp"
+        android:layout_width="119dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.204"
+        android:layout_marginStart="12dp"
+        android:text="00/00/0000"
         app:layout_constraintStart_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/spMedico" />
+        tools:layout_editor_absoluteY="132dp" />
 
     <Button
         android:id="@+id/btnAdicionarData"
-        android:layout_width="47dp"
-        android:layout_height="43dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="+"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Selecionar data"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDataCalendario"
         app:layout_constraintTop_toBottomOf="@+id/spMedico" />
 
     <TextView
@@ -133,8 +131,8 @@
         android:id="@+id/btnLimpar"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="76dp"
         android:text="Limpar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spConvenio" />
@@ -151,7 +149,6 @@
         app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toEndOf="@+id/btnLimpar"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
 
 
 </android.support.constraint.ConstraintLayout>

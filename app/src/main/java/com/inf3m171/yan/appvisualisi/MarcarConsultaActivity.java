@@ -1,10 +1,13 @@
 package com.inf3m171.yan.appvisualisi;
 
+import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -41,8 +44,48 @@ public class MarcarConsultaActivity extends AppCompatActivity {
 
         tvDataCalendario = (TextView) findViewById(R.id.tvDataCalendario);
 
+        btnAdicionarData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selecionarData();
+            }
+        });
+
 
     }
+
+
+    private void selecionarData(){
+        AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+
+        final DatePicker calendario = new DatePicker(this);
+        alerta.setView(calendario);
+
+        alerta.setNegativeButton("Selecionar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                int dia = calendario.getDayOfMonth();
+                int mes = calendario.getMonth() + 1;
+                int ano = calendario.getYear();
+                String data = "";
+                if (dia < 10)
+                    data += "0";
+
+                data += dia + "/";
+                if (mes < 10)
+                    data += "0";
+                data += mes+ "/";
+
+                data += ano;
+
+                tvDataCalendario.setText(data);
+            }
+        });
+        alerta.setNeutralButton("Cancelar", null);
+        alerta.show();
+    }
+
+
 
     @Override
     protected void onStart() {
