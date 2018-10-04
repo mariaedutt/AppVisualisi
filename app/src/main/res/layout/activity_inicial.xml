@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InicialActivity"
-    android:background="#a5e4e6">
+    android:background="#ccf6f7">
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="287dp"
+        android:layout_width="313dp"
         android:layout_height="233dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
