@@ -20,7 +20,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     private EditText etNome, etCpf, etDataDeNascimento, etTelefone, etEmail, etSenha, etConfirmaSenha;
     private Button btnLimparCadastro, btnCadastrar;
-    private  String erro = "";
+    private String erro = "";
     private FirebaseDatabase database;
     private DatabaseReference reference;
 
@@ -64,7 +64,6 @@ public class CadastroActivity extends AppCompatActivity {
         final String email = etEmail.getText().toString();
         final String telefone = etTelefone.getText().toString();
 
-
         if ( !nome.isEmpty() && !email.isEmpty() && !telefone.isEmpty() && !senha.isEmpty() && !confirmaSenha.isEmpty() && ( senha.equals( confirmaSenha ))   ) {
 
 
@@ -106,11 +105,6 @@ public class CadastroActivity extends AppCompatActivity {
             alerta.setMessage("Favor completar todos os campos");
             alerta.setNeutralButton("OK",null);
             alerta.show();
-
-
-
-
-
 
         }
 

@@ -97,7 +97,6 @@ public class MarcarConsultaActivity extends AppCompatActivity {
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setTitle("Erro!");
             alerta.setMessage("Favor selecionar o seu médico");
-
         }else if(spConvenio.getSelectedItemPosition() == 0){
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setTitle("Erro!");
