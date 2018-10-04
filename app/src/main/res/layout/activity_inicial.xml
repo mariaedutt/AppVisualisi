@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InicialActivity"
-    android:background="#a5e4e6">
+    android:background="#a6e3fd">
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="287dp"
+        android:layout_width="313dp"
         android:layout_height="233dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/logo"
+        android:background="@drawable/logo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
