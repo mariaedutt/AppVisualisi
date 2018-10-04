@@ -23,13 +23,9 @@
 
         <activity android:name=".InicialActivity"></activity>
 
-        <activity android:name=".ListConsultasActivity"
-            android:label="Lista de Exames">
-        </activity>
+        <activity android:name=".ListConsultasActivity"></activity>
 
-        <activity android:name=".MarcarConsultaActivity">
-
-        </activity>
+        <activity android:name=".MarcarConsultaActivity"></activity>
 
 
     </application>

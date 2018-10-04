@@ -108,7 +108,6 @@ public class MarcarConsultaActivity extends AppCompatActivity {
 
         if(spMedico.getSelectedItemPosition() == 0 ){
             alerta.setMessage("Favor selecionar o seu médico");
-
         }else if(spConvenio.getSelectedItemPosition() == 0){
             alerta.setMessage("Favor selecionar o seu convênio!");
         }else if(spHorario.getSelectedItemPosition() == 0){

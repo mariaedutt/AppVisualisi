@@ -16,5 +16,6 @@ public class ListConsultasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_consultas);
 
         //listaExames = (ListView) findViewById(R.id.lvListaExames);
+
     }
 }

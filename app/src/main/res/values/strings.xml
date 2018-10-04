@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppVisualisi</string>
+    <string name="app_name">Clínica Oftalmológica Visualisi</string>
 
     <string-array name="listMedicos">
         <item>Selecione...</item>
@@ -13,8 +13,6 @@
         <item>Selecione...</item>
         <item>IPERGS</item>
         <item>UNIMED</item>
-        <item>CGG</item>
-        <item>BlueLife</item>
         <item>Particular</item>
     </string-array>
 
