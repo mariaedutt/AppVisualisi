@@ -14,7 +14,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     private EditText etNome, etCpf, etDataDeNascimento, etTelefone, etEmail, etSenha, etConfirmaSenha;
     private Button btnLimparCadastro, btnCadastrar;
-    private  String erro = "";
+    private String erro = "";
     private FirebaseDatabase database;
     private DatabaseReference reference;
 
@@ -58,20 +58,18 @@ public class CadastroActivity extends AppCompatActivity {
             database = FirebaseDatabase.getInstance();
             reference = database.getReference();
 
-            Paciente j = new Paciente();
-            j.setNome(nome);
+            Paciente paciente = new Paciente();
+            paciente.setNome(nome);
 
-            j.setCpf(etCpf.getText().toString());
-            j.setCpf(etDataDeNascimento.getText().toString());
-            j.setCpf(etTelefone.getText().toString());
-            j.setCpf(etEmail.getText().toString());
-            j.setCpf(etSenha.getText().toString());
-            j.setCpf(etConfirmaSenha.getText().toString());
-            j.setCpf(etCpf.getText().toString());
+            paciente.setCpf(etCpf.getText().toString());
+            paciente.setCpf(etDataDeNascimento.getText().toString());
+            paciente.setCpf(etTelefone.getText().toString());
+            paciente.setCpf(etEmail.getText().toString());
+            paciente.setCpf(etSenha.getText().toString());
+            paciente.setCpf(etConfirmaSenha.getText().toString());
+            paciente.setCpf(etCpf.getText().toString());
 
-
-
-            reference.child("Pacientes").push().setValue(j);
+            reference.child("Pacientes").push().setValue(paciente);
 
             finish();
 

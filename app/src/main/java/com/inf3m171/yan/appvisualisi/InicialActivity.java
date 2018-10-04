@@ -33,7 +33,6 @@ public class InicialActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(InicialActivity.this, ListConsultasActivity.class);
                 startActivity(i);
-
             }
         });
     }
