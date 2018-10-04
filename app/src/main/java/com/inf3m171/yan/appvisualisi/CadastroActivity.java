@@ -1,11 +1,17 @@
 package com.inf3m171.yan.appvisualisi;
 
+import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.inf3m171.yan.appvisualisi.Model.Paciente;
@@ -52,28 +58,59 @@ public class CadastroActivity extends AppCompatActivity {
     private void cadastrar(){
 
 
-        String nome = etNome.getText().toString();
-
-        if ( ! nome.isEmpty()) {
-            database = FirebaseDatabase.getInstance();
-            reference = database.getReference();
-
-            Paciente j = new Paciente();
-            j.setNome(nome);
-
-            j.setCpf(etCpf.getText().toString());
-            j.setCpf(etDataDeNascimento.getText().toString());
-            j.setCpf(etTelefone.getText().toString());
-            j.setCpf(etEmail.getText().toString());
-            j.setCpf(etSenha.getText().toString());
-            j.setCpf(etConfirmaSenha.getText().toString());
-            j.setCpf(etCpf.getText().toString());
+        final String nome = etNome.getText().toString();
+        String senha = etSenha.getText().toString();
+        String confirmaSenha = etConfirmaSenha.getText().toString();
+        final String email = etEmail.getText().toString();
+        final String telefone = etTelefone.getText().toString();
 
 
+        if ( !nome.isEmpty() && !email.isEmpty() && !telefone.isEmpty() && !senha.isEmpty() && !confirmaSenha.isEmpty() && ( senha.equals( confirmaSenha ))   ) {
 
-            reference.child("Pacientes").push().setValue(j);
 
-            finish();
+            FirebaseAuth autenticacao = FirebaseAuth.getInstance();
+
+            autenticacao.createUserWithEmailAndPassword(email, senha)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if ( task.isSuccessful()){
+
+                                database = FirebaseDatabase.getInstance();
+                                reference = database.getReference();
+
+                                Paciente j = new Paciente();
+                                j.setNome(nome);
+                                j.setCpf(etCpf.getText().toString());
+                                j.setDataDeNascimento(etDataDeNascimento.getText().toString());
+                                j.setTelefone(telefone);
+                                j.setEmail(email);
+
+
+
+                                reference.child("Pacientes").push().setValue(j);
+
+                                finish();
+
+                            }
+
+
+                        }
+                    });
+
+
+
+        }else {
+            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+            alerta.setTitle("Erro!");
+            alerta.setMessage("Favor completar todos os campos");
+            alerta.setNeutralButton("OK",null);
+            alerta.show();
+
+
+
+
+
 
         }
 
