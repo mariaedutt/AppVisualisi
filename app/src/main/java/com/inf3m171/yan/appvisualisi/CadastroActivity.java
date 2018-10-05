@@ -86,8 +86,9 @@ public class CadastroActivity extends AppCompatActivity {
                                 j.setEmail(email);
 
 
+                                String usuario = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-                                reference.child("Pacientes").push().setValue(j);
+                                reference.child("Pacientes").child(usuario).setValue(j);
 
                                 finish();
 

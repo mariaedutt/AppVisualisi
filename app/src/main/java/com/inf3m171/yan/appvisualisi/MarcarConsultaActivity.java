@@ -11,15 +11,17 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.inf3m171.yan.appvisualisi.Model.Consulta;
 
 public class MarcarConsultaActivity extends AppCompatActivity {
 
     private Spinner spMedico, spHorario, spConvenio;
-    private Button btnLimpar, btnCadastrar, btnAdicionarData;
+    private Button btnLimpar, btnConfirmar, btnAdicionarData;
     private TextView tvDataCalendario;
 
 
@@ -38,9 +40,10 @@ public class MarcarConsultaActivity extends AppCompatActivity {
         spConvenio = (Spinner) findViewById(R.id.spConvenio);
         spHorario = (Spinner) findViewById(R.id.spHorarios);
 
-        btnLimpar = (Button) findViewById(R.id.btnLimpar);
+
         btnAdicionarData = (Button) findViewById(R.id.btnAdicionarData);
-        btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
+        btnConfirmar = (Button) findViewById(R.id.btnConfirmar);
+
 
         tvDataCalendario = (TextView) findViewById(R.id.tvDataCalendario);
 
@@ -48,6 +51,13 @@ public class MarcarConsultaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 selecionarData();
+            }
+        });
+
+        btnConfirmar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                salvar();
             }
         });
 
@@ -93,20 +103,49 @@ public class MarcarConsultaActivity extends AppCompatActivity {
     }
 
     private void salvar(){
+        AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+        alerta.setTitle("Erro!");
+
         if(spMedico.getSelectedItemPosition() == 0 ){
-            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
-            alerta.setTitle("Erro!");
             alerta.setMessage("Favor selecionar o seu médico");
         }else if(spConvenio.getSelectedItemPosition() == 0){
-            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
-            alerta.setTitle("Erro!");
             alerta.setMessage("Favor selecionar o seu convênio!");
         }else if(spHorario.getSelectedItemPosition() == 0){
-            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
-            alerta.setTitle("Erro!");
             alerta.setMessage("Favor selecionar o seu horário para a consulta!");
-        }
+        }else if(tvDataCalendario.getText().toString().isEmpty()){
+            alerta.setMessage("Favor selecionar o horário para sua consulta");
+        }else {
+
+            String usuario = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+            Consulta c = new Consulta();
+            c.setCodPaciente(usuario);
+            c.setConvenio(spConvenio.getSelectedItem().toString());
+            c.setData(tvDataCalendario.getText().toString());
+            c.setHorario(spHorario.getSelectedItem().toString());
+            c.setMedico(spMedico.getSelectedItem().toString());
+
+
+            database = FirebaseDatabase.getInstance();
+            reference = database.getReference();
+
+            reference.child("Consultas").push().setValue(c);
+           finish();
+
+
+
 
         }
+
+
+
+
+
+
+    }
+
+
+
+
 }
 
