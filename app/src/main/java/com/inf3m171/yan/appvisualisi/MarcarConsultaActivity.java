@@ -105,15 +105,20 @@ public class MarcarConsultaActivity extends AppCompatActivity {
     private void salvar(){
         AlertDialog.Builder alerta = new AlertDialog.Builder(this);
         alerta.setTitle("Erro!");
+        alerta.setNeutralButton("OK", null);
 
         if(spMedico.getSelectedItemPosition() == 0 ){
             alerta.setMessage("Favor selecionar o seu médico");
+            alerta.show();
         }else if(spConvenio.getSelectedItemPosition() == 0){
             alerta.setMessage("Favor selecionar o seu convênio!");
+            alerta.show();
         }else if(spHorario.getSelectedItemPosition() == 0){
             alerta.setMessage("Favor selecionar o seu horário para a consulta!");
+            alerta.show();
         }else if(tvDataCalendario.getText().toString().isEmpty()){
             alerta.setMessage("Favor selecionar o horário para sua consulta");
+            alerta.show();
         }else {
 
             String usuario = FirebaseAuth.getInstance().getCurrentUser().getUid();

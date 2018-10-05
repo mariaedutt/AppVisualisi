@@ -8,7 +8,6 @@ public class Consulta {
 
     private String medico, horario, data, convenio, codPaciente, id;
 
-
     public String getMedico() {
         return medico;
     }
@@ -55,5 +54,10 @@ public class Consulta {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return medico + " \n " + data + "  -  " + horario + " \n " + convenio;
     }
 }
